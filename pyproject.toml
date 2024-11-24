@@ -1,0 +1,19 @@
+[project]
+name = "nbexample"
+version = "0.0.1"
+
+[build-system]
+requires = ["scikit-build-core"]
+build-backend = "scikit_build_core.build"
+
+[tool.scikit-build]
+build-dir = "build/{wheel_tag}"
+strict-config = true
+cmake.verbose = true
+logging.level = "INFO"
+wheel.py-api = "cp39"
+ninja.make-fallback = true
+sdist.exclude = [".venv"]
+sdist.cmake = true
+# sdist.reproducible = true
+# wheel.packages = []
